@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExplorableMaze", "ExplorableMaze", "{CC2F3FEE-3F28-465E-A668-538A076715CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplorableMaze", "ExplorableMaze\ExplorableMaze\ExplorableMaze.csproj", "{D4655063-C41D-43C4-99C9-88C7119ED6BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4655063-C41D-43C4-99C9-88C7119ED6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4655063-C41D-43C4-99C9-88C7119ED6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4655063-C41D-43C4-99C9-88C7119ED6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4655063-C41D-43C4-99C9-88C7119ED6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D4655063-C41D-43C4-99C9-88C7119ED6BD} = {CC2F3FEE-3F28-465E-A668-538A076715CC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B0923C3-E4A0-42A7-9BF3-CB477CB8ABA5}
+	EndGlobalSection
+EndGlobal
