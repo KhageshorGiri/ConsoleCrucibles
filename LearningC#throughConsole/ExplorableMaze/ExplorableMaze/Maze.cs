@@ -29,6 +29,11 @@ public class Maze
         }
     }
 
+    public string GetPlayerCurrentPosition(int x, int y)
+    {
+        return Grid[y,x];
+    }
+
     public bool IsPostitionWalkable(int x, int y)
     {
         // check boundary first
