@@ -9,17 +9,19 @@ public class Game
 
     public void StartGame()
     {
-        string[,] grid =
+        string[,] grid = LevelParser.ParseFileToArray("../../../Level1.txt");
+
+       /* string[,] grid =
         {
             { "=", "=", "=", "=", "=", "=", "=" },
             { "=", " ", "=", " ", " ", " ", "X"},
             { " ", " ", "=", " ", "=", " ", "="},
             { "=", " ", " ", " ", "=", " ", "=" },
             { "=", "=", "=", "=", "=", "=", "=" }
-        };
+        };*/
 
         maze = new Maze(grid);
-        player = new Player(0, 2);
+        player = new Player(2, 1);
 
         // Run the game loop
         RunGameLoop();
