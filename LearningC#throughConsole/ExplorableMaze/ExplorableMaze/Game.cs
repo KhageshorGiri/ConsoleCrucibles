@@ -30,14 +30,35 @@ public class Game
 
     public void DisplayIntro()
     {
-        WriteLine("Welcome to the maze game.");
+
+        string gameWelcomeString = @"
+=================================================================================================
+ __      __       .__                                   
+/  \    /  \ ____ |  |   ____  ____   _____   ____   
+\   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \   
+ \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/   
+  \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >   
+       \/       \/          \/            \/     \/      
+
+
+___________      ___________.__                _____                           ________                       
+\__    ___/___   \__    ___/|  |__   ____     /     \ _____  ________ ____    /  _____/_____    _____   ____  
+  |    | /  _ \    |    |   |  |  \_/ __ \   /  \ /  \\__  \ \___   // __ \  /   \  ___\__  \  /     \_/ __ \ 
+  |    |(  <_> )   |    |   |   Y  \  ___/  /    Y    \/ __ \_/    /\  ___/  \    \_\  \/ __ \|  Y Y  \  ___/ 
+  |____| \____/    |____|   |___|  /\___  > \____|__  (____  /_____ \\___  >  \______  (____  /__|_|  /\___  >
+                                 \/     \/          \/     \/      \/    \/          \/     \/      \/     \/ 
+
+===============================================================================================================
+";
+
+        WriteLine(gameWelcomeString);
         WriteLine("\nInstructions");
         WriteLine("> User arrow (->) key control your moves.");
-        WriteLine("Try to reach to goal, which looks like this:");
+        Write("\nTry to reach to goal, which looks like this: ");
         ForegroundColor = ConsoleColor.Green;
-        WriteLine("X");
+        Write("X");
         ResetColor();
-        WriteLine("> Press any key to start.");
+        WriteLine("\n> Press any key to start.");
         ReadKey(true);
     }
 

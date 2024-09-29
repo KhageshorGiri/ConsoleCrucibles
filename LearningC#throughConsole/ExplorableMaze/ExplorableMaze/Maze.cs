@@ -24,6 +24,17 @@ public class Maze
             {
                 string elemet = Grid[y, x];
                 SetCursorPosition(x, y);
+
+                // Check whether element is X or not, if so chagne the color
+                if ("X".Equals(elemet))
+                {
+                    ForegroundColor = ConsoleColor.DarkBlue;
+                }
+                else
+                {
+                    ForegroundColor = ConsoleColor.Cyan;
+                }
+
                 Write(elemet);
             }
         }
