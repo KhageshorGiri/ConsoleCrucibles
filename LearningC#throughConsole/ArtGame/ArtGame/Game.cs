@@ -1,12 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static System.Console;
 
-namespace ArtGame
+namespace ArtGame;
+
+public class Game
 {
-    internal class Game
+
+    public void RunGame()
     {
+        WriteLine("#### === Micro RPG === ####");
+
+        WaitForKey();
+    }
+
+
+    public void WaitForKey()
+    {
+        WriteLine("\nPress any key to exit...");
+        ReadKey(true);
     }
 }
