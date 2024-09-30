@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExplorableMaze", "Explorabl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExplorableMaze", "ExplorableMaze\ExplorableMaze\ExplorableMaze.csproj", "{D4655063-C41D-43C4-99C9-88C7119ED6BD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArtGame", "ArtGame", "{0A0AFBF6-85AD-496A-B8D7-260250475923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtGame", "ArtGame\ArtGame\ArtGame.csproj", "{EC996290-1D8C-4006-8D0C-5880234AF114}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{D4655063-C41D-43C4-99C9-88C7119ED6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4655063-C41D-43C4-99C9-88C7119ED6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4655063-C41D-43C4-99C9-88C7119ED6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC996290-1D8C-4006-8D0C-5880234AF114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC996290-1D8C-4006-8D0C-5880234AF114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC996290-1D8C-4006-8D0C-5880234AF114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC996290-1D8C-4006-8D0C-5880234AF114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D4655063-C41D-43C4-99C9-88C7119ED6BD} = {CC2F3FEE-3F28-465E-A668-538A076715CC}
+		{EC996290-1D8C-4006-8D0C-5880234AF114} = {0A0AFBF6-85AD-496A-B8D7-260250475923}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B0923C3-E4A0-42A7-9BF3-CB477CB8ABA5}
