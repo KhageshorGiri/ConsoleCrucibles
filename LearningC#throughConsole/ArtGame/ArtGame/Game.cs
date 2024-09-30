@@ -6,9 +6,11 @@ namespace ArtGame;
 public class Game
 {
     private Ant RedAnt;
+    private Bee bee;
     public Game()
     {
         RedAnt = new Ant("Red Ant", 200, ConsoleColor.Red, 3);
+        bee = new Bee("Normal Bee", 250, ConsoleColor.DarkYellow, true);
     }
 
     public void RunGame()
@@ -18,6 +20,13 @@ public class Game
         RedAnt.DisplayInfo();
         RedAnt.Charge();
         RedAnt.Bite();
+
+        WriteLine();
+
+
+        bee.DisplayInfo();
+        bee.Fly();
+        bee.Stinc();
 
         WaitForKey();
     }
