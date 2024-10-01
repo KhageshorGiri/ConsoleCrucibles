@@ -23,11 +23,23 @@ public class Game
     public void DisplayWindow()
     {
         //Clear();
-        var grid = new WindowObject(50, 50);
+        var grid = new WindowObject(60, 20);
 
+        // here y : cols and x : rows
         for(int y = 0; y< grid.Y; y++)
         {
-            Write("#");
+            for (int x = 0; x < grid.X; x++)
+            {
+                if( y == 0 || x == 0 || y == grid.Y-1 || x == grid.X-1)
+                {
+                    Write("#");
+                }
+                else
+                {
+                    Write(" ");
+                }
+            }
+            WriteLine();
         }
     }
 
