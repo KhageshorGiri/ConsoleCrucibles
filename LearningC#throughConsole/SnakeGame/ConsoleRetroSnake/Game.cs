@@ -9,6 +9,7 @@ public class Game
     WindowObject snake ;
     WindowObject food ;
     bool play = true;
+    int score = 0;
 
     public Game()
     {
@@ -89,7 +90,7 @@ public class Game
 
     public bool CollisonDetectionWithWall(int x , int y)
     {
-        if(x == 15 || y == 15)
+        if(x > 0 && y > 0 && x < grid.X && y < grid.Y)
             return true;
         return false;
     }
