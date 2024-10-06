@@ -19,7 +19,7 @@ public class GameArt
                                                                          
 	";
 
-    const string menu = """
+    public static string menu = """
 
 	  Quick Draw
 
@@ -35,7 +35,7 @@ public class GameArt
 	  [escape] give up
 	""";
 
-    const string wait = """
+    public static string wait = """
 
 	  Quick Draw
 	                                                        
@@ -48,7 +48,7 @@ public class GameArt
 	  ------------------------------------------------------
 	""";
 
-    const string fire = """
+    public static string fire = """
 
 	  Quick Draw
 	                                                        
@@ -61,7 +61,7 @@ public class GameArt
 	  ------------------------------------------------------
 	""";
 
-    const string loseTooSlow = """
+    public static string loseTooSlow = """
 
 	  Quick Draw
 	                                                        
@@ -74,7 +74,7 @@ public class GameArt
 	  ------------------------------------------------------
 	""";
 
-    const string loseTooFast = """
+    public static string loseTooFast = """
 
 	  Quick Draw
 	                                                        
@@ -87,7 +87,7 @@ public class GameArt
 	  ------------------------------------------------------
 	""";
 
-    const string win = """
+    public static string win = """
 
 	  Quick Draw
 	                                                        
