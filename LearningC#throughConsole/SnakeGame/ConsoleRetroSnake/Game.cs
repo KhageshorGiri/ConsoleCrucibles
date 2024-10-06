@@ -10,6 +10,7 @@ public class Game
     WindowObject food ;
     bool play = true;
     int score = 0;
+    Random rand = new Random();
 
     public Game()
     {
@@ -28,17 +29,12 @@ public class Game
 
             DisplayWindow();
 
-            //if (CollisonDetectionWithWall(snake.X, snake.Y))
-            //    AskUserToPlayAgain();
-
-            CollisonDetectionWithFood(snake.X, snake.Y);
             HandelPlayerInput();
 
             Thread.Sleep(20);
         }
 
-        DisplayOutro();
-
+       
     }
 
     public void AskUserToPlayAgain()
@@ -46,8 +42,13 @@ public class Game
         Write("\nDo you want to play again?[Y/N]: ");
         var userChoice = ReadLine()?.Trim().ToLower();
         if(userChoice == "yes" || userChoice == "y")
+        {
             play = true;
+            RunGame();
+        }
         play = false;
+        DisplayOutro();
+
     }
 
     public void DisplayWindow()
@@ -86,20 +87,9 @@ public class Game
         }
 
         SetCursorPosition(snake.X+1, snake.Y);
+
     }
 
-    public bool CollisonDetectionWithWall(int x , int y)
-    {
-        if(x > 0 && y > 0 && x < grid.X && y < grid.Y)
-            return true;
-        return false;
-    }
-
-    public void CollisonDetectionWithFood(int x, int y)
-    {
-        if (x == food.X && y == food.Y)
-            WriteLine("Food Found");
-    }
     public void HandelPlayerInput()
     {
         ConsoleKeyInfo keyInfo = Console.ReadKey();
@@ -108,24 +98,30 @@ public class Game
         switch (key)
         {
             case ConsoleKey.UpArrow:
-                if(IsLocationMoveable(snake.X, snake.Y))
+                if (WallCollisionDetection(snake.X, snake.Y))
+                    AskUserToPlayAgain();
+                else if (!ObjectCollessionDetection(snake.X, snake.Y))
                     snake.UpdateYCoordinate(snake.Y - 1);
-                   
                 break;
 
             case ConsoleKey.DownArrow:
-                if (IsLocationMoveable(snake.X, snake.Y+1))
+                if (WallCollisionDetection(snake.X, snake.Y+1))
+                    AskUserToPlayAgain();
+                else if (!ObjectCollessionDetection(snake.X, snake.Y+1))
                     snake.UpdateYCoordinate(snake.Y + 1);
-               
                 break;
 
             case ConsoleKey.LeftArrow:
-                if (IsLocationMoveable(snake.X, snake.Y))
+                if (WallCollisionDetection(snake.X, snake.Y))
+                    AskUserToPlayAgain();
+                else if (!ObjectCollessionDetection(snake.X, snake.Y))
                     snake.UpdateXCooridnate(snake.X - 1);
                 break;
 
             case ConsoleKey.RightArrow:
-                if (IsLocationMoveable(snake.X+1, snake.Y))
+                if (WallCollisionDetection(snake.X+1, snake.Y))
+                    AskUserToPlayAgain();
+                else if (!ObjectCollessionDetection(snake.X+1, snake.Y))
                     snake.UpdateXCooridnate(snake.X + 1);
                 break;
 
@@ -134,11 +130,30 @@ public class Game
         }
     }
 
-    public bool IsLocationMoveable(int x, int y)
+
+    // This is the function that handel collession detection with food
+    public bool ObjectCollessionDetection(int x, int y)
     {
-        if(x > 0 && y > 0 && x < grid.X && y < grid.Y)
+        // logic to find food collision detection
+        if (x == food.X && y == food.Y)
+        {
+            score += 1;
+
+            // set food position randomly
+            int food_x = rand.Next(5, 25);
+            int food_y = rand.Next(5, 15);
+            food.UpdateCoordinate(food_x, food_y);
             return true;
+        }
+
         return false;
+    }
+
+    public bool WallCollisionDetection(int x, int y)
+    {
+        if (x > 0 && y > 0 && x < grid.X && y < grid.Y)
+            return false;
+        return true;
     }
 
     public void DisplayIntro()
@@ -153,6 +168,7 @@ public class Game
     public void DisplayOutro()
     {
         Clear();
+        WriteLine($"Final Score : {score}");
         WriteLine("Thanks for playing game.");
         WriteLine("\nPress any key to exist...");
         ReadKey(true);
