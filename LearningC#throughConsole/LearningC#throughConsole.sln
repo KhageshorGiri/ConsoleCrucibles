@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sudoku", "Sudoku", "{A71FA8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuGamePlay", "Sukoda\SukodaGamePlay\SudokuGamePlay.csproj", "{1C3F2F13-7261-462B-A850-3496AD5C56E2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuickDraw", "QuickDraw", "{F8088A5D-4FBB-4E54-B76F-7EE84D46AA0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickDrawGame", "QuickDraw\QuickDrawGame\QuickDrawGame.csproj", "{8AE46A78-1C9E-4834-9C0F-14F0A30359C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,10 @@ Global
 		{1C3F2F13-7261-462B-A850-3496AD5C56E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C3F2F13-7261-462B-A850-3496AD5C56E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C3F2F13-7261-462B-A850-3496AD5C56E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AE46A78-1C9E-4834-9C0F-14F0A30359C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE46A78-1C9E-4834-9C0F-14F0A30359C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE46A78-1C9E-4834-9C0F-14F0A30359C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE46A78-1C9E-4834-9C0F-14F0A30359C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{EC996290-1D8C-4006-8D0C-5880234AF114} = {0A0AFBF6-85AD-496A-B8D7-260250475923}
 		{5D03F1C5-ECDF-46A0-80D6-08C2673959BF} = {1611F63F-75A0-48EE-8DC7-53A7B5CB07F3}
 		{1C3F2F13-7261-462B-A850-3496AD5C56E2} = {A71FA84D-5D25-4629-B7D3-7B41A4F1EC1E}
+		{8AE46A78-1C9E-4834-9C0F-14F0A30359C6} = {F8088A5D-4FBB-4E54-B76F-7EE84D46AA0A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B0923C3-E4A0-42A7-9BF3-CB477CB8ABA5}
