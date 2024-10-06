@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+
+// Game play entry section | Main Function
+
+using SudokuGamePlay;
+
+Game game = new Game();
+game.RunGame();

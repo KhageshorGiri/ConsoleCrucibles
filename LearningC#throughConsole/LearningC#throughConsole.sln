@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SnakeGame", "SnakeGame", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleRetroSnake", "SnakeGame\ConsoleRetroSnake\ConsoleRetroSnake.csproj", "{5D03F1C5-ECDF-46A0-80D6-08C2673959BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sukoda", "Sukoda", "{A71FA84D-5D25-4629-B7D3-7B41A4F1EC1E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sudoku", "Sudoku", "{A71FA84D-5D25-4629-B7D3-7B41A4F1EC1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SukodaGamePlay", "Sukoda\SukodaGamePlay\SukodaGamePlay.csproj", "{1C3F2F13-7261-462B-A850-3496AD5C56E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuGamePlay", "Sukoda\SukodaGamePlay\SudokuGamePlay.csproj", "{1C3F2F13-7261-462B-A850-3496AD5C56E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
