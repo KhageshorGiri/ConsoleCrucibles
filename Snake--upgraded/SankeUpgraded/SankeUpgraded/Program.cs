@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using SankeUpgraded;
+
+Game game = new Game();
+game.RunGame();
