@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
+            components = new System.ComponentModel.Container();
+            player = new PictureBox();
             computer = new PictureBox();
             ball = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            GameTimer = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)player).BeginInit();
             ((System.ComponentModel.ISupportInitialize)computer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ball).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // player
             // 
-            pictureBox1.Image = Properties.Resources.player;
-            pictureBox1.Location = new Point(2, 137);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(30, 120);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            player.Image = Properties.Resources.player;
+            player.Location = new Point(2, 137);
+            player.Name = "player";
+            player.Size = new Size(30, 120);
+            player.SizeMode = PictureBoxSizeMode.StretchImage;
+            player.TabIndex = 0;
+            player.TabStop = false;
             // 
             // computer
             // 
@@ -56,7 +57,6 @@
             computer.SizeMode = PictureBoxSizeMode.StretchImage;
             computer.TabIndex = 1;
             computer.TabStop = false;
-            computer.Click += pictureBox2_Click;
             // 
             // ball
             // 
@@ -67,20 +67,28 @@
             ball.SizeMode = PictureBoxSizeMode.StretchImage;
             ball.TabIndex = 2;
             ball.TabStop = false;
-            ball.Click += pictureBox3_Click;
+            // 
+            // GameTimer
+            // 
+            GameTimer.Enabled = true;
+            GameTimer.Interval = 20;
+            GameTimer.Tick += GameTimerEvent;
             // 
             // PongGameForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.Black;
             ClientSize = new Size(800, 450);
             Controls.Add(ball);
             Controls.Add(computer);
-            Controls.Add(pictureBox1);
+            Controls.Add(player);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "PongGameForm";
             Text = "Player : 0 | Computer : 0";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            KeyDown += KeyIsDown;
+            KeyUp += KeyIsUp;
+            ((System.ComponentModel.ISupportInitialize)player).EndInit();
             ((System.ComponentModel.ISupportInitialize)computer).EndInit();
             ((System.ComponentModel.ISupportInitialize)ball).EndInit();
             ResumeLayout(false);
@@ -88,8 +96,9 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox player;
         private PictureBox computer;
         private PictureBox ball;
+        private System.Windows.Forms.Timer GameTimer;
     }
 }
