@@ -26,7 +26,7 @@ public class Game
 
     public void DisplayIntro()
     {
-        WriteLine("Welcome");
+        WriteLine("Welcome  to snake game -- version : ");
         ReadKey(true);
     }
 
