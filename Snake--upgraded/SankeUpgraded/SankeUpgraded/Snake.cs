@@ -10,12 +10,12 @@ namespace SankeUpgraded;
 /// <summary>
 /// Class that helps to create object for snake with its propertis and behaviors
 /// </summary>
-public class Sanke
+public class Snake
 {
     private readonly ConsoleColor HeadColor;
     private readonly ConsoleColor BodyColor;
 
-    public Sanke()
+    public Snake()
     {
 
     }
