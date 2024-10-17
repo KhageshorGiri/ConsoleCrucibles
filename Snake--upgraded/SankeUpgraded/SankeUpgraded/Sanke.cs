@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SankeUpgraded.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,4 +12,26 @@ namespace SankeUpgraded;
 /// </summary>
 public class Sanke
 {
+    private readonly ConsoleColor HeadColor;
+    private readonly ConsoleColor BodyColor;
+
+    public Sanke()
+    {
+
+    }
+
+    public void Move(Direction direction)
+    {
+
+    }
+
+    public void Draw()
+    {
+
+    }
+
+    public void Clear()
+    {
+
+    }
 }
