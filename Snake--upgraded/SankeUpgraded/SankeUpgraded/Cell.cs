@@ -1,4 +1,7 @@
-﻿namespace SankeUpgraded;
+﻿
+using static System.Console;
+
+namespace SankeUpgraded;
 
 public readonly struct Cell
 {
@@ -20,7 +23,8 @@ public readonly struct Cell
 
     public void Draw()
     {
-        for(int x = 0; x < CellSize; x++)
+        ForegroundColor = Color;
+        for (int x = 0; x < CellSize; x++)
         {
             for(int y = 0; y < CellSize; y++)
             {

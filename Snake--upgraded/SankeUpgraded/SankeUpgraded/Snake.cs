@@ -47,6 +47,8 @@ public class Snake
             Direction.Down => new Cell(Head.X, Head.Y + 1, HeadColor),
             _ => Head
         };
+
+        Draw();
     }
 
     public void Draw()

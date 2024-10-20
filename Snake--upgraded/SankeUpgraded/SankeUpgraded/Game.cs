@@ -17,7 +17,7 @@ public class Game
 
     private const int FrameMilliseconds = 200;
 
-    private const ConsoleColor BorderColor = ConsoleColor.Red;
+    private const ConsoleColor BorderColor = ConsoleColor.Gray;
 
     private const ConsoleColor FoodColor = ConsoleColor.Green;
 
