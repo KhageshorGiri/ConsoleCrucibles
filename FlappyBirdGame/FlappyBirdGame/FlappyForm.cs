@@ -1,13 +1,16 @@
-﻿namespace FlappyBirdGame;
+﻿using System.Media;
+
+namespace FlappyBirdGame;
 
 public partial class FlappyForm : Form
 {
+    // game variables
     int pipeSpeed = 8;
     int gravity = 8;
     int score = 0;
     int level = 1;
-
     string formHeader = string.Empty;
+
     public FlappyForm()
     {
         InitializeComponent();
@@ -95,5 +98,40 @@ public partial class FlappyForm : Form
     private void EndGame()
     {
         GameTimer.Stop();
+
+        // Play a sound to indicate the game is over
+        SystemSounds.Exclamation.Play();  // Plays a Windows default sound
+
+        // Display a message box asking the user if they want to play again
+        DialogResult result = MessageBox.Show(this, "Game Over! Your score: " + score +
+                                              "\nWould you like to play again?",
+                                              "Game Over",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Question);
+
+        if (result == DialogResult.Yes)
+            RestratGame();
+
+        else
+            this.Close();
+    }
+
+    // RestartGame
+
+    private void RestratGame()
+    {
+        // Reset game variables
+        pipeSpeed = 8;
+        gravity = 8;
+        score = 0;
+        level = 1;
+
+        // Reset positions of bird and pillars
+        bird.Top = 100;  
+        bottompiller.Left = 800;
+        toppiller.Left = 800;
+
+        GameTimer.Start();
+
     }
 }

@@ -96,6 +96,7 @@
             Controls.Add(ground);
             Controls.Add(toppiller);
             Name = "FlappyForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Flappy Bird Game";
             KeyDown += GameKeyIsDown;
             KeyUp += GameKeyIsUp;
