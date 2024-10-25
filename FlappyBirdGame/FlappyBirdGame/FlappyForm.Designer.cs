@@ -91,12 +91,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(785, 527);
+            Controls.Add(bird);
             Controls.Add(bottompiller);
             Controls.Add(ground);
             Controls.Add(toppiller);
-            Controls.Add(bird);
             Name = "FlappyForm";
             Text = "Flappy Bird Game";
+            KeyDown += GameKeyIsDown;
+            KeyUp += GameKeyIsUp;
             ((System.ComponentModel.ISupportInitialize)bird).EndInit();
             ((System.ComponentModel.ISupportInitialize)toppiller).EndInit();
             ((System.ComponentModel.ISupportInitialize)ground).EndInit();
